@@ -9,6 +9,7 @@ import {
 } from "./data.js";
 const sidebar = document.getElementById("sidebar");
 const toggleButton = document.getElementById("toggleButton");
+const cutButton = document.getElementById("cutButton");
 const amenities = document.getElementById("amenities");
 const memberShipContainer = document.getElementById("memberShipContainer");
 const insurancePlanContainer = document.getElementById(
@@ -21,6 +22,11 @@ const reviewSwiperContainer = document.getElementById("reviewSwiperContainer");
 const FAQSContainer = document.getElementById("FAQSContainer");
 
 toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
+});
+
+
+cutButton.addEventListener("click", () => {
   sidebar.classList.toggle("hidden");
 });
 
