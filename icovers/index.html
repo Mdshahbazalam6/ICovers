@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              TEXT_BLACK: "#111111",
+              TEXT_ORANGE: "#E95B3A",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      href="./images/logo2.png"
+      type="image/x-icon"
+    />
+    <title>ICovers</title>
+  </head>
+  <body>
+    <div class="w-11/12 mx-auto xl:max-w-[1440px]">
+      <!-- Header -->
+      <div
+        class="mx-auto justify-between items-center text-TEXT_BLACK h-24 hidden xl:flex"
+      >
+        <div class="w-3/5 flex justify-between items-center">
+          <div>
+            <img src="./images//logo.png" alt="logo" />
+          </div>
+          <div class="flex items-center gap-3">
+            <p class="hover:underline">Life Insurance</p>
+            <span class="material-symbols-outlined text-TEXT_BLACK text-xl">
+              expand_more
+            </span>
+          </div>
+          <div class="hover:underline">About Us</div>
+          <div class="hover:underline">Resources</div>
+          <div class="hover:underline">Why iCover</div>
+          <div class="flex items-center gap-3">
+            <p class="hover:underline">FAQs</p>
+            <span class="material-symbols-outlined text-TEXT_BLACK text-xl">
+              expand_more
+            </span>
+          </div>
+        </div>
+        <div class="w-1/5">
+          <div
+            class="w-40 2xl:w-44 h-[2.5rem] 2xl:h-[3.1rem] bg-white hover:bg-TEXT_ORANGE rounded-[30px] border-2 border-red-500 cursor-pointer flex justify-center items-center"
+          >
+            <div
+              class="text-TEXT_ORANGE text-lg 2xl:text-xl font-semibold font-['Open Sans'] hover:text-white"
+            >
+              Get Free Quote
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-between items-center xl:hidden w-full mx-auto h-16"
+      >
+        <div><img src="./images/logo.png" alt="logo" class="w-28" /></div>
+        <div class="w-8 h-8 text-TEXT_ORANGE">
+          <span
+            class="material-symbols-outlined text-3xl"
+            id="toggleButton"
+            data-effect="st-effect-1"
+          >
+            menu
+          </span>
+        </div>
+      </div>
+
+      <aside
+        id="sidebar"
+        class="w-64 bg-TEXT_ORANGE fixed top-20 left-0 z-[5000] text-white h-screen text-TEXT_BLACK p-4 hidden ease-in-out duration-1000 xl:hidden"
+      >
+        <div class="flex items-center gap-3 hover:underline">
+          <p class="hover:underline">Life Insurance</p>
+          <span class="material-symbols-outlined text-xl"> expand_more </span>
+        </div>
+        <div class="hover:underline">About Us</div>
+        <div class="hover:underline">Resources</div>
+        <div class="hover:underline">Why iCover</div>
+        <div class="flex items-center gap-3">
+          <p class="hover:underline">FAQs</p>
+          <span class="material-symbols-outlined text-xl"> expand_more </span>
+        </div>
+      </aside>
+
+      <div
+        class="flex justify-between items-start mt-5 md:mt-20 flex-col md:flex-row"
+      >
+        <div class="w-full">
+          <p class="text-TEXT_BLACK text-3xl md:text-4xl font-[Prata]">
+            Life Insurance for <br />Every Chapter of Your Life
+          </p>
+          <p
+            class="text-xl md:text-2xl text-TEXT_BLACK font-[Open Sans] mt-5 md:mt-7"
+          >
+            Protecting Lives, Securing Futures<br />with iCover MarketPlace
+          </p>
+          <div
+            class="w-fit px-3 py-2 xl:px-5 xl:py-3 mt-10 bg-red-500 rounded-[30px] hidden md:block cursor-pointer hover:bg-[#F8F8F9]"
+          >
+            <div
+              class="text-white text-xl xl:text-2xl font-semibold font-['Open Sans'] hover:text-TEXT_ORANGE"
+            >
+              View Plans
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <img
+            src="./images/bannerImage.png"
+            alt="banner"
+            class="mx-auto w-[361px] md:w-[488px]"
+          />
+        </div>
+        <div
+          class="w-fit px-3 py-2 xl:px-5 xl:py-3 mt-10 bg-red-500 rounded-[30px] border-2 md:hidden mx-auto mb-[3.5rem]"
+        >
+          <div
+            class="text-white text-xl xl:text-2xl font-semibold font-['Open Sans']"
+          >
+            View Plans
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-36 h-[5px] bg-TEXT_BLACK rounded-3xl mx-auto md:hidden"
+      ></div>
+      <!-- Amenities -->
+      <div
+        id="amenities"
+        class="grid grid-cols-1 :grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7 md:mt-8"
+      ></div>
+      <!-- Become a Member -->
+      <p class="text-TEXT_BLACK text-4xl font-[Prata] mt-14 md:mt-24">
+        Unlock Exclusive Benefits. Become a Member Today!
+      </p>
+      <p
+        class="text-TEXT_BLACK text-xl md:text-2xl font-[Open Sans] mt-5 md:mt-8"
+      >
+        Discover a world of benefits in our membership program. Enjoy enticing
+        merchandise discounts, scholarships, and recreational events all
+        designed to enrich your life with every membership
+      </p>
+      <div
+        id="memberShipContainer"
+        class="flex justify-between items-center flex-wrap mt-16"
+      ></div>
+      <p class="text-TEXT_BLACK text-4xl mt-8 font-[Prata] hidden md:block">
+        Need for Insurance Coverage
+      </p>
+      <div class="justify-between items-center gap-5 hidden md:flex">
+        <div class="w-1/2 mx-auto">
+          <img src="./images/Carousel.png" alt="carousel" class="mx-auto" />
+        </div>
+        <div class="w-1/2 mx-auto font-[Open Sans]">
+          <div class="flex flex-start gap-5">
+            <img src="./images/medicine-svgrepo-com.png" alt="medical bills" />
+            <p class="text-TEXT_BLACK text-2xl xl:text-3xl">Medical Bills</p>
+          </div>
+          <p class="mt-5 text-TEXT_BLACK text-xl xl:text-2xl">
+            Protect your finances and health with insurance coverage for medical
+            bills. Gain peace of mind knowing your expenses are covered
+          </p>
+          <div class="flex gap-3 items-center mt-8">
+            <div class="w-4 h-4 rounded-full bg-TEXT_ORANGE"></div>
+            <div
+              class="w-3 h-3 rounded-full border-TEXT_ORANGE border-[1px]"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full border-TEXT_ORANGE border-[1px]"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full border-TEXT_ORANGE border-[1px]"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full border-TEXT_ORANGE border-[1px]"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full border-TEXT_ORANGE border-[1px]"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <p
+        class="text-TEXT_BLACK text-3xl mt-12 md:text-5xl md:mt-8 font-[Prata] mb-3 md:mb-8"
+      >
+        Find your Own Insurance Plan
+      </p>
+      <div class="flex justify-center items-center gap-5">
+        <div class="w-[30%] hidden md:block">
+          <img
+            src="./images/insurance-plan.png"
+            alt="insurance plan"
+            class="w-full"
+          />
+        </div>
+        <div
+          class="w-full mx-auto md:w-[70%] font-[Open Sans]"
+          id="insurancePlanContainer"
+        >
+          <p class="text-TEXT_BLACK text-base md:text-xl mb-3 md:mb-8">
+            Feel free to decide a life insurance policy from a list of highly
+            intuitive options with good coverage amount that you find will be
+            sufficient to protect your family’s financial future
+          </p>
+          <img
+            src="./images/insurance-plan.png"
+            alt="insurance plan"
+            class="w-auto mx-auto h-80 md:hidden mb-5"
+          />
+        </div>
+      </div>
+      <p
+        class="text-TEXT_BLACK text-3xl mt-12 md:text-5xl md:mt-8 font-[Prata] mb-3 md:mb-8"
+      >
+        Buy plans from a Brand you prefer
+      </p>
+      <div class="flex justify-center items-center gap-5 flex-row-reverse">
+        <div class="w-[30%] hidden md:block">
+          <img
+            src="./images/preferBrand.png"
+            alt="prefer brand"
+            class="w-full"
+          />
+        </div>
+        <div
+          class="w-full mx-auto md:w-[70%] font-[Open Sans]"
+          id="preferBrandContainer"
+        >
+          <p class="text-TEXT_BLACK text-base md:text-xl mb-3 md:mb-8">
+            Buy an insurance policy from any one of our trusted century old non
+            profit life insurers who offers a tailor made plan which is
+            customised specifically for you based on your decision
+          </p>
+          <img
+            src="./images/preferBrand.png"
+            alt="prefer brand"
+            class="w-auto mx-auto h-80 md:hidden mb-5"
+          />
+        </div>
+      </div>
+
+      <p
+        class="text-TEXT_BLACK text-3xl mt-12 md:text-5xl md:mt-8 font-[Prata] mb-3 md:mb-8"
+      >
+        Choose a product that suits you
+      </p>
+      <div class="flex justify-center items-center gap-5">
+        <div class="w-[30%] hidden md:block">
+          <img src="./images/productSuit.png" alt="product" class="w-full" />
+        </div>
+        <div
+          class="w-full mx-auto md:w-[70%] font-[Open Sans]"
+          id="productSuitsContainer"
+        >
+          <p class="text-TEXT_BLACK text-base md:text-xl mb-3 md:mb-8">
+            Be it Whole Life Insurance, Term Insurance or Annunities, choose an
+            insurance plan from a list of product catalogue that suits all use
+            cases for people from all age groups
+          </p>
+          <img
+            src="./images/productSuit.png"
+            alt="product"
+            class="w-auto mx-auto h-80 md:hidden mb-5"
+          />
+        </div>
+      </div>
+      <div
+        style="
+          background-image: url('./images/Banner.png');
+          background-repeat: no-repeat;
+        "
+        class="w-full h-[460px] mx-auto mt-16 hidden md:block"
+      >
+        <div class="max-w-3xl pl-28 pt-16">
+          <p class="text-TEXT_BLACK text-2xl font-[Open Sans] font-normal">
+            iCover stands out as your ideal choice, offering state-of-the-art
+            technology, unwavering reliability, and comprehensive coverage. Our
+            commitment to excellence ensures you receive the best in insurance
+            services
+          </p>
+          <div class="mt-16 flex items-center gap-6">
+            <img src="./images/hand.png" alt="hand logo" class="w-12 h-12" />
+            <p class="font-[Open Sans] text-TEXT_BLACK text-3xl">
+              Buy Insurance in 5 Minutes
+            </p>
+          </div>
+          <div class="mt-10 flex items-center gap-6">
+            <img
+              src="./images/server-square-svgrepo-com.png"
+              alt="icon"
+              class="w-12 h-12"
+            />
+            <p class="font-[Open Sans] text-TEXT_BLACK text-3xl">
+              Buy Insurance using QUI Technology
+            </p>
+          </div>
+        </div>
+      </div>
+      <p
+        class="text-TEXT_BLACK text-3xl mt-12 md:text-5xl md:mt-8 font-[Prata] mb-3 md:mb-36"
+      >
+        Our Customers love what we do
+      </p>
+      <div
+        id="reviewContainer"
+        class="items-center gap-10 overflow-x-scroll pt-10 w-full mt-2 hidden md:flex reviewContainer"
+      ></div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper mb-3 pb-16 md:hidden">
+        <div class="swiper-wrapper" id="reviewSwiperContainer"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="md:hidden">
+        <div class="text-TEXT_BLACK text-2xl sm:text-3xl font-['Prata']">
+          Need for Insurance Coverage
+        </div>
+        <!-- swiper-slide -->
+        <div class="swiper mySwiper mb-3 mt-10 pb-16 md:hidden">
+          <div class="swiper-wrapper" id="reviewSwiperContainer">
+            <div class="swiper-slide">
+              <img src="./images/Membership2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Membership2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Membership2.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="flex flex-start gap-5">
+          <img src="./images/medicine-svgrepo-com.png" alt="medical bills" />
+          <p class="text-TEXT_BLACK text-2xl xl:text-3xl">Medical Bills</p>
+        </div>
+        <div class="text-TEXT_BLACK text-base font-['Open Sans'] mt-3">
+          Protect your finances and health with insurance coverage for medical
+          bills. Gain peace of mind knowing your expenses are covered
+        </div>
+      </div>
+      <p class="text-TEXT_BLACK text-4xl font-['Prata'] mt-16 hidden md:grid">
+        Few clever questions asked by our Customers
+      </p>
+      <div
+        class="text-TEXT_BLACK gap-5 grid grid-cols-2 mt-8 hidden md:grid"
+        id="FAQSContainer"
+      ></div>
+      <div
+        class="w-full h-[26rem] bg-TEXT_ORANGE mt-40 relative hidden md:block"
+      >
+        <img
+          src="./images/couple.png"
+          alt="couple"
+          class="absolute bottom-0 left-5 lg:left-16 xl:left-20 2xl:left-40 z-50 w-[26rem] 2xl:w-[30rem]"
+        />
+        <img
+          src="./images/icoverBigIcon.png"
+          alt="logo"
+          class="absolute w-[22rem] h-[22rem] bottom-8 left-[20rem] xl:left-[26rem]"
+        />
+        <div
+          class="w-[16rem] lg:w-[20rem] xl:w-[32rem] 2xl:w-[43rem] text-white absolute top-28 right-10 :right-20"
+        >
+          <p class="text-3xl lg:text-4xl 2xl:text-5xl font-['Prata']">
+            Planning for the future starts with iCover Marketplace
+          </p>
+          <p class="text-xl font-semibold font-['Open Sans'] mt-10">
+            View Plans
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-auto mt-24">
+        <div>
+          <img src="./images/logo.png" alt="" />
+          <p
+            class="w-96 text-TEXT_BLACK text-xs md:text-base font-['Open Sans'] mt-5"
+          >
+            Real.Simple.Insurance<br />Choosing the right partner to
+            implement<br />the right technology is the key to success.
+          </p>
+        </div>
+        <div
+          class="text-TEXT_BLACK font-semibold font-['Open Sans'] text-base lg:text-xl flex gap-5 flex-wrap items-center lg:flex-col my-5 lg:my-0"
+        >
+          <p class="cursor-pointer text-center hover:underline">Solutions</p>
+          <p class="cursor-pointer lg:mt-4 text-center hover:underline">
+            Support
+          </p>
+          <p class="cursor-pointer lg:mt-4 text-center hover:underline">
+            About Us
+          </p>
+          <p class="cursor-pointer lg:mt-4 text-center" hover:underline>
+            Resources
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-TEXT_BLACK text-base md:text-xl font-semibold font-['Open Sans']"
+          >
+            Get in Touch With Us
+          </p>
+          <div class="flex gap-10 lg:gap-3 flex-row lg:flex-col">
+            <div class="flex gap-3 items-center mt-3">
+              <span class="material-symbols-outlined"> call </span>
+              <div class="text-xs md:text-base font-['Open Sans']">
+                <a href="tel:+13142553861">+1 314-255-3861</a><br />
+                <a href="tel:+13145704366" class="">+1 314-570-4366</a>
+              </div>
+            </div>
+            <div class="flex gap-3 items-center mt-[14px]">
+              <span class="material-symbols-outlined"> mail </span>
+              <div class="text-xs md:text-base font-['Open Sans']">
+                <a href="mailto:hari@icoverinsure.com">
+                  hari@icoverinsure.com </a
+                ><br />
+                <a href="mailto:life@kskljlife.com"> life@kskljlife.com </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" ">
+          <p
+            class="text-TEXT_BLACK text-xs md:text-xl font-semibold font-['Open Sans'] mt-5 lg:mt-0"
+          >
+            Headquarters
+          </p>
+          <div class="flex gap-3 items-start mt-[14px]">
+            <span class="material-symbols-outlined"> pin_drop </span>
+            <p
+              class="text-xs md:text-base font-['Open Sans'] white-space-nowrap"
+            >
+              iCover | 15510 Olive, Suite #205 <br />
+              Chesterfield, <br />
+              MO 63017
+            </p>
+          </div>
+          <div class="flex items-center gap-5 mt-8 justify-center">
+            <img
+              src="./images/facebook.png"
+              alt="facebook"
+              class="w-9 h-9 cursor-pointer"
+            />
+            <img
+              src="./images/meta.png"
+              alt="twitter"
+              class="w-9 h-9 cursor-pointer"
+            />
+            <img
+              src="./images/instagram.png"
+              alt="instagram"
+              class="w-9 h-9 cursor-pointer"
+            />
+            <img
+              src="./images/linkedin.png"
+              alt="linkedin"
+              class="w-9 h-9 cursor-pointer"
+            />
+            <img
+              src="./images/youtube.png"
+              alt="youtube"
+              class="w-9 h-9 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-[10px] md:text-xs font-['Open Sans'] flex gap-5 justify-center lg:justify-start mt-5 lg:mt-11"
+      >
+        <p>Privacy Policy</p>
+        <p>Terms and Conditions</p>
+        <p>Data Security</p>
+        <p>Licenses</p>
+      </div>
+      <div class="text-[10px] mt-5 mb-10 lg:mt-3 md:text-xs font-['Open Sans']">
+        Copyright © 2023 iCover Insure operates in some states as iCover
+        Insurance Service. State license # ######, ######. iCover offers
+        policies issued by KSKJ Life, American Slovenian Catholic Union, an
+        Illinois fraternal benefit society located at 2439 Glenwood Ave.,
+        Joliet, IL 60435. KSKJ Life is licensed in the following states: AR, AZ,
+        CA, CO, CT, IA, IL, IN, KS, KY, MI, MN, MS, MT, OH, PA, TN, WI and
+        Washington D.C. Products and product features may not be available in
+        all states. To avoid requiring a medical exam, the life insurance
+        application asks certain health and lifestyle questions.
+      </div>
+    </div>
+  </body>
+  <script src="./index.js" type="module"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</html>
